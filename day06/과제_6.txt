@@ -1,0 +1,42 @@
+
+문제. 학교 내 관리해야 할 객체를 아래와 같이 선정하였습니다
+Student	class
+	String name
+	int age
+	int id	
+
+Teacher	class
+	String name
+	int age
+	String subject 	
+
+Employee class
+	String name
+	int age
+	String dept
+
+
+각각의 객체에 대해 아래와 같은 조건에 맞게 클래스(Person , Student, Teacher, Employee)를 작성하세요. 
+ 
+1) 부모 class Person을 정의하며  공통적으로 사용 되는 name 과 age를 정의하고 
+    Student, Teacher, Employee  에서 물려 받도록 설계 한다.
+
+2) 클래스 작성시 멤버변수를 직접 접근 못하도록 encapsulation시키기 위해 각 변수를 private으로 선언하고, 
+    각 private member variable에 접근하기 위한 getter, setter member method를 선언하시오. 
+    (getter, setter method는 public으로 선언하고, 각 변수마다 만듬) 
+
+3) Student, Teacher, Employee 클래스에, 
+    멤버 변수의 내용을 출력하기 위한 print method를 구현하시오.
+
+4) 각 클래스에는 멤버변수 값을 인자(argument)로 전달받아 객체를 생성할 수 있는 생성자(Constructor)를 정의하시오.
+
+
+5)  print() 메소드의 실행 결과 화면.
+[출력값]
+이   름 : 홍길동    나 이 : 20     학    번 : 200201
+이   름 : 이순신    나 이 : 30     담당과목 : JAVA
+이   름 : 유관순    나 이 : 40     부    서 : 교무과
+
+  
+
+
