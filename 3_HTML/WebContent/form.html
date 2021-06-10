@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- get = url노출 -->
+	<form action="LoginServlet" method="get">
+		<label for="id">ID</label><input name="id" id="id"><input type="button" value="ID 중복확인"><br>
+		<!-- ID<input name="id"><br> -->
+		PW<input type="password" name="pw"><br>
+		사진<input type="file" name="pic"><br>
+		취미:
+		자전거<input type="checkbox" name="hobby" value="bicycle">
+		여행<input type="checkbox" name="hobby" value="trip">
+		드라이브<input type="checkbox" name="hobby" value="drive">
+		영화<input type="checkbox" name="hobby" value="movie">
+		<br>
+		<input type="hidden" name="secureToken" value="kkkkk">
+		<br>
+		
+		<select name="food" multiple="multiple">
+			<option value="kimbab">김밥</option>
+			<option value="떡볶이">떡볶이</option>
+			<option value="순대">순대</option>
+			<option value="어묵">어묵</option>
+		</select>
+		<br>
+		<textarea rows="10" cols="50"></textarea>
+		<br>
+		<input type="submit" value="회원가입">
+		<input type="reset" value="취소">
+		<!-- <input type="button" value="로그인"> -->
+	</form>
+</body>
+</html>
