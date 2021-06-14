@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	/* const obj1 = {};
+	alert(typeof(obj1));
+	
+	const obj2 = 10;
+	alert(typeof(obj2));
+	
+	const obj3 = '10';
+	alert(typeof(obj3)); */
+	
+	// 상수에서는 값이 없으면 안됨!
+	// const obj4;
+	/* let obj4;
+	alert(typeof(obj4)); */
+	
+	/* let obj5 = function(){};
+	alert(typeof(obj5)); */
+	
+	// 요거시 객체!
+	/* let member = {
+		name : "박혁준",
+		age : 30,
+		gender : 'F',
+		address : "Seoul",
+		height : 181,
+		job : function(){ console.log("교육생"); },
+		eat : function(){ console.log("고기"); },
+		walk : function(){ console.log("직립보행"); },
+	};
+	
+	let member2 = {
+		name : "전지현",
+		age : 30,
+		gender : 'F',
+		address : "Seoul",
+		height : 181,
+		job : function(){ console.log("교육생"); },
+		eat : function(){ console.log("고기"); },
+		walk : function(){ console.log("직립보행"); },
+	}; */
+	//console.log(member);
+	//alert(member.job);
+	//member.eat();
+	
+	// function = 완전히 분리된 객체
+	// 객체 간 중복코드 제거하기
+	function a(){ alert("교육생"); }
+	// this = 실행되는 객체를 가리킴
+	function b(food){ console.log(this.name + "는 " + food + "를 좋아한다"); }
+	function c(){ console.log("직립보행"); }
+	function d(){ alert("논다"); }
+	
+	let member = {
+			name : "박혁준",
+			age : 30,
+			gender : 'F',
+			address : "Seoul",
+			height : 181,
+			job : a,
+			eat : b,
+			walk : c
+		};
+		
+		let member2 = {
+			name : "전지현",
+			age : 30,
+			gender : 'F',
+			address : "Seoul",
+			height : 181,
+			job : d,
+			eat : b,
+			walk : c
+		};
+		
+		member2.eat('고기');
+</script>
+
+</body>
+</html>

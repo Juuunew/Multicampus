@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 글로벌변수는 가급적 사용 x
+	var radius = 10;
+	
+	function myFunction(a,b) {
+		// let은 로컬변수
+		/* let pi=3.14159265; */
+		
+		// 한번만 할당할때에는 const
+		const pi = 3.14159265;
+		// 한번이라도 변경할 여지가 있다면 let
+		let temp = b;
+		temp =  5;
+		alert(2*radius*pi);
+	}
+	
+	function myFunction2() {
+		alert(radius);
+	}
+	
+/* 	function myFunction3() {
+		const date = new Date();
+		const year = date.getFullYear();
+		const month = date.getMonth();
+		const day = date.getDay();
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
+		const seconds = date.getSeconds(); */
+		
+		/* for(let i=0; i<5; i++) {
+			console.log(date, year, month, day, hours, minutes, seconds);
+		} */
+		
+/* 		const a = [date, year, month, day, hours, minutes, seconds];
+		
+		alert(a);
+		alert(a.length);
+		console.log(a);
+		console.log(a[1]);
+		
+		let i = 0;
+		while(i < a.length) {
+			console.log(a[i++]); 
+		} */
+		
+		/* for(let i = 0; i < a.length; i++) {
+			console.log(a[i]); 
+		} */
+		
+	//}
+	
+/* 	// 익명함수
+	let myFunction3 = function() {
+		const date = new Date();
+		const year = date.getFullYear();
+		const month = date.getMonth();
+		const day = date.getDay();
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
+		const seconds = date.getSeconds();
+		
+		const a = [date, year, month, day, hours, minutes, seconds];
+		
+		for(let i = 0; i < a.length; i++) {
+		console.log(a[i]); 
+		} 
+	}
+	
+	function myFunction4(){
+		alert("myFunction4");
+	}
+	
+	myFunction3 = 100; */
+	
+	// 익명함수
+	let myFunction3 = function() {
+		const date = new Date();
+		const year = date.getFullYear();
+		const month = date.getMonth();
+		const day = date.getDay();
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
+		const seconds = date.getSeconds();
+		
+		const a = [date, year, month, day, hours, minutes, seconds];
+		
+		for(let i = 0; i < a.length; i++) {
+		console.log(a[i]); 
+		} 
+	}
+	
+	function myFunction4(){
+		return typeof(myFunction3);
+	}
+	
+	myFunction3 = 100;
+	
+</script>
+</head>
+
+<body style="background-color: hsla(50, 33%, 25%, .75)">
+	
+	<input type="button" value="전송" onclick="alert(myFunction4())">
+	
+</body>
+
+
+
+</html>

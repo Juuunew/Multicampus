@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// 정의
+	function a() {
+		alert("^^");
+	}
+	// 호출
+	//a();
+	
+	// 콜백함수 = 다른 함수를 매개 변수로 받는 함수
+	function b(c) {
+		for(let i = 0; i < 3; i++ ) {
+			c();
+		}
+	}
+	
+	function aa() {
+		alert("ㅠㅠ");
+	}
+	
+	b(aa);
+</script>
+
+</body>
+</html>
