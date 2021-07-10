@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+var localstream;
+
+	$(document).ready(function(){
+		$("#onBtn").click(function(){
+			navigator.getUserMedia = navigator.getUserMedia
+			|| navigator.webkitGetUserMedia
+			|| navigator.mozGetUserMedia;
+			
+			if(navigator.webkitGetUserMedia) {
+				navigator.webkitGetUserMedia(
+						{audio:false, video:true}, 
+						function(stream){
+							video = document.querySelector('video');
+							video.srcObject = stream;
+							localstream=stream;
+							
+							// 할당
+							video.onloadedmetadata = function(e){
+								video.play();
+							}
+						}, 
+						function(){
+							alert("fail");
+						}
+					);
+			}
+		});	// end onBtn
+		
+		$("#pauseBtn").click(function(){
+			video.pause();
+			localstream.getTracks()[0].stop();
+			
+			var canvas = document.getElementById("drawCanvas");
+			var context = canvas.getContext("2d");
+			
+			context.drawImage(video, 0, 0, 320, 240);
+		});	// end pauseBtn
+		
+		$("#offBtn").click(function(){
+			localstream.getTracks()[0].stop();
+			video.src="";
+		});	// end offBtn
+		
+	});	// end document
+</script>
+</head>
+<body>
+	<center>
+		<video src="" controls="controls" width="320" height="240"></video>
+		<canvas  id="drawCanvas"   width="320" height="240" style="border:1px solid black">
+			이 문장은 사용자의 웹 브라우저가 canvas 요소를 지원하지 않을 때 나타납니다!
+		</canvas>
+		<br>
+		<input type="button" value="카메라 켜기" id="onBtn">
+		<input type="button" value="찰칵" id="pauseBtn">
+		<input type="button" value="카메라 끄기" id="offBtn">
+	</center>
+</body>
+</html>
