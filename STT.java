@@ -7,8 +7,8 @@ public class STT {
 
 	public static void main(String[] args) {
 		
-		String clientId = "0g1rxm6bv8";             // Application Client ID";
-        String clientSecret = "4YDR7HUDwcVawaPK6On7H54evzwVh9XKnsRfivOb";     // Application Client Secret";
+		String clientId = "";             // Application Client ID";
+        String clientSecret = "";     // Application Client Secret";
 		
 		DataOutputStream dos = null;
 		BufferedReader br = null;
